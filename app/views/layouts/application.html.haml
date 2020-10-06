@@ -2,10 +2,18 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title BringMeAppBook
+    %title BRING ME APP BOOK
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %header
+      %h1
+        BRING ME APP BOOK
+
     = yield
+
+    %footer
+      %p
+        © 2020 BEING ME APP BOOK All Rights Reserved.
