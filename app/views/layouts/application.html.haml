@@ -8,12 +8,27 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %header
-      %h1
-        BRING ME APP BOOK
+    %header.header.container
+      .module.row
+        .content.col-md-6
+          %h1.logo
+            = link_to "BRING ME APP BOOK", root_path
+        .content.col-md-6
+          - if user_signed_in?
+            .nav
+              .username
+                = current_user.name
+              .nav-item
+                = link_to "ログアウト", destroy_user_session_path, method: :delete
+          - else
+            .nav
+              .nav-item
+                = link_to "ログイン", new_user_session_path, class: 'post btn btn-primary'
+              .nav-item
+                = link_to "新規登録", new_user_registration_path, class: 'post btn btn-primary'
 
     = yield
 
-    %footer
-      %p
+    %footer.footer.container
+      %p.row
         © 2020 BEING ME APP BOOK All Rights Reserved.
