@@ -1,0 +1,19 @@
+.edit_article
+  = form_with model: @post, url: { action: :update }, local: true do |f|
+    .field
+      .img_form
+        = f.label :img, class: "image_label" do
+          .prev-content
+            - if @post.img?
+              = image_tag @post.img.url, class: "img_box"
+            - else
+              = icon('fas', 'image', class: 'photo-icon')
+            = f.file_field :img, class: "hidden_file"
+      .title_form
+        = f.label :title, style: "display: none;"
+        = f.text_field :title, placeholder: "タイトル", class: "title_box"
+      .text_form
+        = f.label :text, style: "display: none;"
+        = f.text_area :text, placeholder: "ご自由にお書きください。", cols: "40", rows: "7", class: "text_box"
+      .submit_btn
+        = f.submit "アップデート", class: "btn_box"
