@@ -1,0 +1,14 @@
+.new_article
+  = form_with model: @post do |f|
+    .field
+      .img_form
+        = f.label :img, style: "display: none;"
+        = f.file_field :img, class: "img_box"
+      .title_form
+        = f.label :title, style: "display: none;"
+        = f.text_field :title, placeholder: "タイトル", class: "title_box"
+      .text_form
+        = f.label :text, style: "display: none;"
+        = f.text_area :text, placeholder: "ご自由にお書きください。", cols: "40", rows: "7", class: "text_box"
+      .submit_btn
+        = f.submit "投稿", class: "btn_box"
