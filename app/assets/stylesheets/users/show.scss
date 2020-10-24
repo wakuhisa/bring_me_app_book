@@ -1,0 +1,29 @@
+.show_article_name {
+  height: 70px;
+  line-height: 50px;
+  .username {
+    margin-left: 30px;
+  }
+}
+
+.user_post {
+  margin-bottom: 50px;
+  border: solid 1px #e6e6e6;
+  border-radius: 5px;
+}
+.title-font {
+  margin-top: 30px;
+  margin-left: 20px;
+  color: $black;
+  font-size: 20px;
+  font-weight: bold;
+  &:hover {
+    color: $black;
+  }
+}
+.text-font {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
