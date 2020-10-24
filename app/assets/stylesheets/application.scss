@@ -4,5 +4,9 @@
 @import "posts";
 @import "users";
 @import "comments";
+@import "edit";
+@import "show";
+@import "./users/show";
+@import "new";
 @import "font-awesome-sprockets";
 @import "font-awesome";

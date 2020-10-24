@@ -10,45 +10,128 @@ ul {
 }
 
 a {
+  display: block;
   &:hover {
     text-decoration: none;
   }
 }
 
+img {
+  vertical-align: bottom;
+}
+
+// ******************************  header  ******************************
+
 .header {
   width: 100%;
-  .module {
-    width: 70%;
+  padding-bottom: 20px;
+  &_inner {
+    width: 57%;
     margin: 0 auto;
-    .content {
+    letter-spacing: 1px;
+    .module {
       position: relative;
       .logo {
         a {
           color: $black;
-          font-size: 27px;
-          letter-spacing: 1px;
+          font-size: 25px;
         }
       }
       .nav {
         margin-top: 20px;
         position: absolute;
-        right: 20px;
+        right: 0;
         display: flex;
-        .username {
-        }
-        .nav-item {
+        .btn-group {
           margin-right: 20px;
-          letter-spacing: 1px;
+          position: relative;
+          .username {
+            .username-btn {
+              color: $gray;
+              font-weight: bold;
+              border: none;
+              background-color: transparent;
+              transition: .15s;
+              box-shadow: none;
+              cursor: default;
+              &:hover {
+                color: $gray;
+                background-color: transparent;
+                box-shadow: none;
+              }
+            }
+          }
+          .dropdown-toggle {
+            height: 100%;
+            color: $gray;
+            border: none;
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transition: .15s;
+            box-shadow: none;
+            &:hover {
+              color: $black;
+              background-color: transparent;
+              box-shadow: none;
+            }
+            .icon {
+              margin-top: 5px;
+              margin-right: 5px;
+            }
+          }
+          .dropdown-menu {
+            min-width: 100px;
+            transition: .15s;
+            .dropdown-item {
+              a {
+                margin-left: 10px;
+                color: $gray;
+                font-weight: bold;
+                &:hover {
+                  color: $black;
+                }
+              }
+            }
+          }
+        }
+        .item {
+          margin-right: 20px;
           &:last-of-type {
             margin-right: 0;
           }
           .btn {
-            color: $white;
             padding: 10px 20px;
-            background-color: blue;
+            color: $white;
+            font-weight: bold;
+            border: none;
+            background-color: $btn-bg-color;
             transition: .15s;
+            box-shadow: none;
             &:hover {
-              background-color: darkblue;
+              color: $white;
+              background-color: $hov-btn-bg-color;
+              box-shadow: none;
+            }
+          }
+          .post-btn {
+            &:before {
+              font-family: "Font Awesome 5 Free";
+              content: '\f304';
+              color: $white;
+              margin-right: 5px;
+            }
+          }
+          .log-in {
+            color: $gray;
+            background-color: $white;
+            border: none;
+            box-shadow: none;
+            &:hover {
+              color: $black;
+              background-color: $white;
+              box-shadow: none;
             }
           }
         }
@@ -57,7 +140,69 @@ a {
   }
 }
 
+.wrapper {
+  width: 100%;
+  border-top: solid 1px $border-color;
+  border-bottom: solid 1px $border-color;
+  &_inner {
+    width: 57%;
+    height: 100%;
+    margin: 0 auto;
+    letter-spacing: 1px;
+  }
+}
+
+// ******************************  wrapper  ******************************
+
+.article {
+  width: 57%;
+  height: 100%;
+  margin: 50px auto 0;
+  .post {
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: .15s;
+    }
+    &:hover:after {
+      opacity: 0.5;
+    }
+    .post_img {
+      .img {
+      }
+    }
+    .post_title {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: $black;
+    }
+    .post_text {
+      margin-top: 7px;
+      font-size: 14.5px;
+      color: $black;
+    }
+    .post_user {
+      margin-top: 10px;
+      color: $gray;
+    }
+  }
+}
+
+// ******************************  footer  ******************************
+
 .footer {
+  margin-top: 30px;
+  margin-bottom: 20px;
   text-align: center;
   letter-spacing: 1px;
   cursor: default;
