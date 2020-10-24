@@ -1,0 +1,20 @@
+.show_article
+  .show_article_post
+    .show_article_post_img
+      = image_tag @post.img.url, width: "100%", class: "img"
+    .show_article_post_title
+      = @post.title
+    .module
+      .show_article_post_user
+        = link_to "/users/#{@user.id}" do
+          = @post.user.name
+      .show_article_post_data
+        = @post.created_at.strftime("%Y/%m/%d")
+    .show_article_post_text
+      = safe_join(@post.text.split("\n"), tag(:br))
+    - if user_signed_in? && @post.user_id == current_user.id
+      .icon
+        .edit_icon
+          = link_to "", edit_post_path(@post), class: "edit_button fas fa-edit"
+        .delete_icon
+          = link_to "", @post, method: :delete, data: { confirm: "#{@post.title}を削除してもよろしいですか？" }, class: "delete_button fas fa-trash-alt"
