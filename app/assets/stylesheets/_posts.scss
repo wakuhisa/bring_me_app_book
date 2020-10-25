@@ -53,9 +53,8 @@ img {
               background-color: transparent;
               transition: .15s;
               box-shadow: none;
-              cursor: default;
               &:hover {
-                color: $gray;
+                color: $black;
                 background-color: transparent;
                 box-shadow: none;
               }
