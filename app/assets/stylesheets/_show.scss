@@ -1,0 +1,64 @@
+.show_article {
+  margin: 20px 0 20px;
+  &_post {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    &_img {
+      width: 100%;
+      margin-top: 50px;
+    }
+    &_title {
+      margin-top: 40px;
+      font-size: 40px;
+    }
+    .module {
+      .show_article_post_user {
+        margin-top: 5px;
+        font-size: 17px;
+        a {
+          color: $black;
+          display: inline-block;
+          &:hover {
+            color: $gray;
+          }
+        }
+      }
+      .show_article_post_data {
+        margin-top: 2px;
+        color: $gray;
+        font-size: 13px;
+      }
+    }
+    &_text {
+      margin-top: 35px;
+      margin-bottom: 50px;
+      font-size: 20px;
+    }
+    .icon {
+      position: absolute;
+      top: 0;
+      right: -40px;
+      .edit_icon {
+        font-size: 17px;
+        a {
+          color: $gray;
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+      .delete_icon {
+        margin-top: 7px;
+        font-size: 17px;
+        a {
+          color: $gray;
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
