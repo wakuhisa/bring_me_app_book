@@ -32,7 +32,7 @@
     }
     &_text {
       margin-top: 35px;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       font-size: 20px;
     }
     .icon {
@@ -55,6 +55,56 @@
           color: $gray;
           &:hover {
             color: $black;
+          }
+        }
+      }
+    }
+    .comment {
+      width: 97%;
+      margin: 50px auto 30px;
+      border: solid 1px $gray;
+      border-radius: 3px;
+      &_form {
+        .text_box {
+          width: 92%;
+          margin: 20px auto 0;
+          padding: 5px 5px 0;
+          border-radius: 2px;
+          display: flex;
+        }
+        .comment_btn {
+          margin: 15px auto 0;
+          padding: 5px 15px;
+          letter-spacing: 1px;
+          border: solid 1px $gray;
+          border-radius: 2px;
+          background-color: $white;
+          display: block;
+          &:hover {
+            border-color: $black;
+          }
+        }
+      }
+      &_view {
+        margin-bottom: 30px;
+        .comment_head {
+          margin: 10px 0 10px 25px;
+          font-size: 1.15em;
+        }
+        .comment_module {
+          margin-left: 25px;
+          font-size: 1.1em;
+          .comment_name {
+            color: $black;
+            display: inline-block;
+            &:hover {
+              color: $gray;
+            }
+          }
+          .comment_text {
+            margin-left: 10px;
+            margin-bottom: 10px;
+            display: flex;
           }
         }
       }
