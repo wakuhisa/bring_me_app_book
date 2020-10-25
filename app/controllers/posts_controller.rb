@@ -45,6 +45,10 @@ class PostsController < ApplicationController
     redirect_to :root
   end
 
+  def search
+    @posts = Post.search(params[:keyword])
+  end
+
   private
   def post_params
     params.require(:post).permit(:img, :title, :text, :image_cache, :remove_image).merge(user_id: current_user.id)
