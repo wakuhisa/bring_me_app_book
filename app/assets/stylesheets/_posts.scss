@@ -152,12 +152,41 @@ img {
   }
 }
 
+// ******************************  search_form  ******************************
+
+.clearfix {
+  content: "";
+  clear: both;
+  display: block;
+}
+.search {
+  width: 100%;
+  margin-top: 30px;
+  &_form {
+    margin-right: 10px;
+    float: right;
+    display: block;
+    .search_box {
+      padding: 5px;
+    }
+    .search_btn {
+      padding: 6px 10px;
+      border: solid 1px $gray;
+      border-radius: 2px;
+      background-color: $white;
+      &:hover {
+        border: solid 1px $black;
+      }
+    }
+  }
+}
+
 // ******************************  wrapper  ******************************
 
 .article {
   width: 57%;
   height: 100%;
-  margin: 50px auto 0;
+  margin: 30px auto 0;
   .post {
     width: 100%;
     margin-bottom: 50px;

@@ -1,6 +1,7 @@
-= form_with(url: posts_searches_path, local: true, method: :get) do |f|
-  = f.text_field :keyword
-  = f.submit "検索"
+.search.clearfix
+  = form_with(url: posts_searches_path, local: true, method: :get, class: "search_form") do |f|
+    = f.text_field :keyword, placeholder: "テキスト検索", class: "search_box"
+    = f.submit "検索", class: "search_btn"
 .article
   - @posts.each do |post|
     = link_to post_path(post), "data-turbolinks": false do
