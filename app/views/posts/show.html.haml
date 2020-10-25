@@ -18,3 +18,14 @@
           = link_to "", edit_post_path(@post), class: "edit_button fas fa-edit"
         .delete_icon
           = link_to "", @post, method: :delete, data: { confirm: "#{@post.title}を削除してもよろしいですか？" }, class: "delete_button fas fa-trash-alt"
+    .comment_form
+      - if current_user
+        = form_with(model: [@post, @comment], local: true) do |f|
+          = f.text_area :text, placeholder: "コメント", rows: "2"
+          = f.submit "送信"
+    .comment_view
+      %h4 コメント一覧
+      - if @comments
+        - @comments.each do |comment|
+          = link_to comment.user.name, "/users/#{comment.user_id}"
+          = comment.text
