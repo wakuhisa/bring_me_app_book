@@ -18,7 +18,7 @@
             .nav
               .btn-group
                 .item.username
-                  = link_to current_user.name, "#", class: "btn btn-primary username-btn"
+                  = link_to current_user.name, "/users/#{current_user.id}", class: "btn btn-primary username-btn"
                 .dropdown-toggle.dropdown-toggle-split.btn.btn-primary{data: {toggle: "dropdown"}, aria: {haspopup: "true", expanded: "false"}}
                   = icon('fas', 'sort-down', class: "icon")
                   %span.sr-only
