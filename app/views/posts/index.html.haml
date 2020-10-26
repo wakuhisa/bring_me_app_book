@@ -14,5 +14,5 @@
           = safe_join(post.text.split("\n"), tag(:br))
         .post_user
           = post.user.name
-  .paginate
-    = paginate @posts
+.paginate
+  = paginate @posts
