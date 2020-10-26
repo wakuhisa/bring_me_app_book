@@ -213,11 +213,13 @@ img {
       font-size: 20px;
       font-weight: bold;
       color: $black;
+      word-wrap: break-word;
     }
     .post_text {
       margin-top: 7px;
       font-size: 14.5px;
       color: $black;
+      word-wrap: break-word;
     }
     .post_user {
       margin-top: 10px;
