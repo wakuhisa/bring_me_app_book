@@ -12,3 +12,5 @@
             = post.title
         .show_article_post_text.text-font
           = safe_join(post.text.split("\n"), tag(:br))
+.paginate
+  = paginate @posts
