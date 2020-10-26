@@ -11,6 +11,6 @@
           .show_article_post_title.title-font
             = post.title.truncate(100)
         .show_article_post_text.text-font
-          = safe_join(post.text.split("\n"), tag(:br)).truncate(300)
+          = safe_join(post.text.truncate(250).split("\n"), tag(:br))
 .paginate
   = paginate @posts
