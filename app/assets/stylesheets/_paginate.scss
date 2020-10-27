@@ -1,0 +1,41 @@
+.pagination {
+  height: 30px;
+  line-height: 30px;
+  margin: 0 0 40px 50px;
+  display: flex;
+  .page {
+    color: #696969;
+    border: none;
+    a {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      &:hover {
+        border-radius: 15px;
+      }
+    }
+  }
+  .current {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: $white;
+    text-align: center;
+    background-color: $btn-color;
+    border-radius: 50%;
+  }
+  .page,
+  .prev,
+  .next,
+  .first,
+  .last {
+    margin-right: 10px;
+    a {
+      color: $gray;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}

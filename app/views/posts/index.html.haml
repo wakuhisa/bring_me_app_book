@@ -9,8 +9,10 @@
         .post_img
           = image_tag post.img.url, width: "100%", class: "img"
         .post_title
-          = post.title
+          = post.title.truncate(50)
         .post_text
-          = safe_join(post.text.split("\n"), tag(:br))
+          = safe_join(post.text.truncate(150).split("\n"), tag(:br))
         .post_user
           = post.user.name
+.paginate
+  = paginate @posts
