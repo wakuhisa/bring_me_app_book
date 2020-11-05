@@ -114,6 +114,14 @@ img {
               box-shadow: none;
             }
           }
+          .log-out {
+            color: $gray;
+            background-color: $white;
+            &:hover {
+              color: $black;
+              background-color: $white;
+            }
+          }
           .post-btn {
             &:before {
               font-family: "Font Awesome 5 Free";
