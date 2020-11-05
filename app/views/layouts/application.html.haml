@@ -29,6 +29,8 @@
                   .dropdown-item
                     = link_to "ログアウト", destroy_user_session_path, method: :delete
               .item.post-btn
+                = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-primary log-out"
+              .item.post-btn
                 = link_to "投稿", new_post_path, class: "btn btn-primary post-btn"
           - else
             .nav
