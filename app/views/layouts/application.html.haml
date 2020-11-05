@@ -19,15 +19,15 @@
               .btn-group
                 .item.username
                   = link_to current_user.name, "/users/#{current_user.id}", class: "btn btn-primary username-btn"
-                .dropdown-toggle.dropdown-toggle-split.btn.btn-primary{data: {toggle: "dropdown"}, aria: {haspopup: "true", expanded: "false"}}
-                  = icon('fas', 'sort-down', class: "icon")
-                  %span.sr-only
-                    Toggle Dropdown
-                .dropdown-menu
-                  .dropdown-item
-                    = link_to "マイページ", "/users/#{current_user.id}"
-                  .dropdown-item
-                    = link_to "ログアウト", destroy_user_session_path, method: :delete
+                -# .dropdown-toggle.dropdown-toggle-split.btn.btn-primary{data: {toggle: "dropdown"}, aria: {haspopup: "true", expanded: "false"}}
+                -#   = icon('fas', 'sort-down', class: "icon")
+                -#   %span.sr-only
+                -#     Toggle Dropdown
+                -# .dropdown-menu
+                -#   .dropdown-item
+                -#     = link_to "マイページ", "/users/#{current_user.id}"
+                -#   .dropdown-item
+                -#     = link_to "ログアウト", destroy_user_session_path, method: :delete
               .item.post-btn
                 = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-primary log-out"
               .item.post-btn

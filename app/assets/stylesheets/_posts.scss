@@ -47,53 +47,56 @@ img {
           position: relative;
           .username {
             .username-btn {
-              color: $gray;
+              // ***** ログアウトできない問題のため、$grayから一時変更 *****
+              color: $btn-color;
               font-weight: bold;
               border: none;
               background-color: transparent;
               transition: .15s;
               box-shadow: none;
               &:hover {
-                color: $black;
+                // ***** ログアウトできない問題のため、$blackから一時変更 *****
+                color: $hov-btn-bg-color;
                 background-color: transparent;
                 box-shadow: none;
               }
             }
           }
-          .dropdown-toggle {
-            height: 100%;
-            color: $gray;
-            border: none;
-            background-color: transparent;
-            position: absolute;
-            top: 0;
-            right: 0;
-            transition: .15s;
-            box-shadow: none;
-            &:hover {
-              color: $black;
-              background-color: transparent;
-              box-shadow: none;
-            }
-            .icon {
-              margin-top: 5px;
-              margin-right: 5px;
-            }
-          }
-          .dropdown-menu {
-            min-width: 100px;
-            transition: .15s;
-            .dropdown-item {
-              a {
-                margin-left: 10px;
-                color: $gray;
-                font-weight: bold;
-                &:hover {
-                  color: $black;
-                }
-              }
-            }
-          }
+          // ***** ログアウトできない問題のため、一時的にコメントアウトでdropdownを使用不可に *****
+          // .dropdown-toggle {
+          //   height: 100%;
+          //   color: $gray;
+          //   border: none;
+          //   background-color: transparent;
+          //   position: absolute;
+          //   top: 0;
+          //   right: 0;
+          //   transition: .15s;
+          //   box-shadow: none;
+          //   &:hover {
+          //     color: $black;
+          //     background-color: transparent;
+          //     box-shadow: none;
+          //   }
+          //   .icon {
+          //     margin-top: 5px;
+          //     margin-right: 5px;
+          //   }
+          // }
+          // .dropdown-menu {
+          //   min-width: 100px;
+          //   transition: .15s;
+          //   .dropdown-item {
+          //     a {
+          //       margin-left: 10px;
+          //       color: $gray;
+          //       font-weight: bold;
+          //       &:hover {
+          //         color: $black;
+          //       }
+          //     }
+          //   }
+          // }
         }
         .item {
           margin-right: 20px;
