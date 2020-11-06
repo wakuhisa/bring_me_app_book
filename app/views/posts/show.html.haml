@@ -1,7 +1,10 @@
 .show_article
   .show_article_post
     .show_article_post_img
-      = image_tag @post.img.url, width: "100%", class: "img"
+      - if @post.img?
+        = image_tag @post.img.url, width: "100%", class: "img"
+      - else
+        = image_tag "book-sample.jpg", width: "100%", class: "img"
     .show_article_post_title
       = @post.title
     .module
